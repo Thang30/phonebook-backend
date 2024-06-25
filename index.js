@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 
 const app = express();
-const port = 3001;
+const PORT = process.env.PORT || 3001
 
 const phonebook = [
   { id: '1', name: 'Arto Hellas', number: '040-123456' },
