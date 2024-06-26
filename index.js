@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(error => console.log('Error connecting to MongoDB:', error.message));
 
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors());
 app.use(express.json());
 
 morgan.token('body', (req, res) => {
